@@ -1,3 +1,7 @@
+# Contributor Guidelines
+- Clone the project via GitHub SSH or via HTTPS though with this you'll have to set up your upstream.
+- Do not contribute to the main or develop branch, create a new branch from develop with your name and make your changes.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
