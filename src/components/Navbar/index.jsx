@@ -7,55 +7,41 @@ function Navbar() {
       <nav className="navbar fixed top-0 w-full bg-white text-black p-7 z-50">
         <div className="container mx-auto flex items-center justify-between">
           <ul className="flex flex-row space-x-4">
-            <Link href="/about">Home2</Link>
-            <li>
-              <a
+            
+            <Link
+                href="/home"
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                HOME
+            </Link>
+            <Link
                 href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                AUDIO
+            </Link>
+            <Link
                 href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                Audio
-              </a>
-            </li>
-            <li>
-              <a
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                VIDEO
+            </Link>
+            <Link
                 href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                Video
-              </a>
-            </li>
-            <li>
-              <a
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                STORIES
+            </Link>
+            <Link
+                href="/about"
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                ABOUT
+            </Link>
+            <Link
                 href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                Stories
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                Live
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 rounded hover:text-gray-600 uppercase"
-              >
-                About
-              </a>
-            </li>
+                className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
+                LIVE
+            </Link>
+            
+           
+            
+           
           </ul>
 
           {/* Search Input */}
