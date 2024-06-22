@@ -9,7 +9,7 @@ function Navbar() {
           <ul className="flex flex-row space-x-4">
             
             <Link
-                href="/HeroSection"
+                href="/home"
                 className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
                 HOME
             </Link>
