@@ -2,7 +2,7 @@ import React from 'react';
 
 function Herosection() {
   return (
-    <div className="mt-9">
+    <div className="mt-20"> {/* Adjust the margin as needed */}
       <div className="mt-7 bg-gray-500 p-4" style={{ height: '35.8rem' }}>
         News and daily updates
       </div>
