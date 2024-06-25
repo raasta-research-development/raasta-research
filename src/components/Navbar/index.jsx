@@ -19,7 +19,7 @@ function Navbar() {
                 AUDIO
             </Link>
             <Link
-                href="#"
+                href="/video"
                 className="block px-4 py-2 rounded hover:text-gray-600 uppercase" >
                 VIDEO
             </Link>
