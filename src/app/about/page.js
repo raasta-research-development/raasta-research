@@ -3,6 +3,7 @@ import * as React from "react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -11,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { SunSnow } from "lucide-react";
 
 function About() {
   const imageUrls = [
@@ -28,7 +30,7 @@ function About() {
           src="/images/foot.png"
           alt="News and Updates"
           width="40"
-          height="40"
+          height="60"
           className=" pb-5 "
         />
 

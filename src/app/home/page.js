@@ -2,14 +2,7 @@
 // import React from 'react';
 import Link from 'next/link';
 import * as React from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+
 
 function Home() {
   return (
@@ -26,23 +19,7 @@ function Home() {
   />
 </div>
 
-<Carousel className="w-full max-w-xs">
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">saumiya</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+
 
       <div className="flex flex-col ml-24 mr-24 md:flex-row mt-4 md:mt-8 space-y-4 md:space-y-0 md:space-x-4 justify-center">
 
