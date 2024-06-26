@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="bg-lime-800 text-white p-4">
       <div className="flex flex-row justify-between max-w-7xl mx-auto">
 
-
         <div className="flex flex-col justify-between ">
           <p className="text-sm">&copy; 2024 Your Website. All rights reserved.</p>
           <p className="text-sm">Privacy Notice</p>

@@ -1,4 +1,15 @@
-import React from 'react';
+
+// import React from 'react';
+import Link from 'next/link';
+import * as React from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 function Home() {
   return (
@@ -8,29 +19,44 @@ function Home() {
       </div>
 
       <div className="flex justify-center items-center mt-6">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full md:w-auto px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-1 ring-gray-400 transition-all hover:border-gray-400"
-        />
-      </div>
+  <input
+    type="text"j
+    placeholder="Search"
+    className="w-full md:w-full lg:w-96 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-1 ring-gray-400 transition-all hover:border-gray-400"
+  />
+</div>
 
-      <div className="flex justify-center items-center mt-6">
-        <div className="text-center px-4 md:px-8">
-          <p className="text-sm md:text-lg">“Don't try to be perfect. Just try to be better than you were yesterday.”</p>
-        </div>
-      </div>
+<Carousel className="w-full max-w-xs">
+      <CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">saumiya</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
 
       <div className="flex flex-col ml-24 mr-24 md:flex-row mt-4 md:mt-8 space-y-4 md:space-y-0 md:space-x-4 justify-center">
-        <div
-          className="bg-[url('/images/musicbackground.jpg')] p-4 md:p-6  rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
-          style={{ height: '35rem', flex: '1' }}
-        >
-          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Audio</p>
-          <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
-            Additional Text on Hover
-          </div>
-        </div>
+
+<div className="bg-[url('/images/musicbackground.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
+  style={{ height: '35rem', flex: '1' }}
+>
+  <Link href="/about"> {/* Replace "/audio" with the actual path of your audio page */}
+      <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Audio</p>
+      <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
+        Additional Text on Hover
+      </div>
+    
+  </Link>
+</div>
 
         <div
           className="bg-[url('/images/videoback.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
