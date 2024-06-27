@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import Herosection from "./home/page";
 
 export default function Home() {
@@ -6,7 +6,6 @@ export default function Home() {
     <>
       <div>
         <Herosection />
-        <Footer />
       </div>
     </>
   );
