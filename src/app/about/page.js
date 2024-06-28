@@ -1,9 +1,9 @@
 "use client";
-import * as React from "react";
+// import * as React from "react";
+import React, { useState } from 'react';
+
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
-
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -14,7 +14,12 @@ import {
 } from "@/components/ui/carousel";
 import { SunSnow } from "lucide-react";
 
+const Option1 = () => <div className='bg-black h-20 w-20'>This is Option 1 content.</div>;
+const Option2 = () => <div>This is Option 2 content.</div>;
+const Option3 = () => <div>This is Option 3 content.</div>;
+
 function About() {
+  
   const imageUrls = [
     "/images/c1.webp",
     "/images/c2.webp",
@@ -22,6 +27,22 @@ function About() {
     "/images/c4.webp",
     "/images/c5.webp",
   ];
+
+  const [option, setOption] = useState('option1');
+
+  const renderContent = () => {
+    switch (option) {
+      case 'option1':
+        return Option1();
+      case 'option2':
+        return <Option2 />;
+      case 'option3':
+        return <Option3 />;
+      default:
+        return <Option1 />;
+    }
+  };
+  
 
   return (
     <div className="mt-28">
@@ -94,7 +115,18 @@ function About() {
         </span>
         <button>Know more</button>
       </div>
+      <div>
+      <nav>
+        <ul>
+          <li onClick={() => setOption('option1')}>Option 1</li>
+          <li onClick={() => setOption('option2')}>Option 2</li>
+          <li onClick={() => setOption('option3')}>Option 3</li>
+        </ul>
+      </nav>
+      <div>{renderContent()}</div>
     </div>
+    </div>
+
   );
 }
 
