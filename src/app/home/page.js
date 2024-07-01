@@ -91,7 +91,7 @@ function Home() {
             Login
           </button>
         </form>
-        <p className="text-sm text-center mt-4">Don't have an account? <a href="#">Sign Up</a></p>
+        <p className="text-sm text-center mt-4">Don&apos;t have an account? <a href="#">Sign Up</a></p>
       </div>
     </div>
   );

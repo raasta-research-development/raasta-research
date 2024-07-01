@@ -1,8 +1,9 @@
 "use client";
 // import * as React from "react";
 import React, { useState } from 'react';
+import Image from 'next/image'
 
-import Image from "next/image";
+
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -15,11 +16,11 @@ import {
 import { SunSnow } from "lucide-react";
 
 const Option1 = () => 
-<div className='w-4/5 mt-8 ml-36 flex'>
+<div className='w-11/12 mt-8 ml-36 flex'>
   <div className='w-2/3 flex flex-col'>
   <h className='text-6xl font-serif'>Eyes of Planet</h>
   <h className='text-xl font-serif ml-1 mb-8'>Your Visual Guide to Sustainability</h>
-<span>Welcome to Planet Peep, Raasta's streaming platform dedicated to sustainable development. Here, we curate information from across the globe—insights, practices, and discoveries from diverse cultures, environments, economies, and geographies. Our mission is to educate the world by presenting this wealth of knowledge in an accessible and user-friendly manner. Through global collaborations with organizations and individuals, our aim is to create a comprehensive tapestry of wisdom for a sustainable future.</span>
+<span>Welcome to Planet Peep, Raasta &apos;  streaming platform dedicated to sustainable development. Here, we curate information from across the globe—insights, practices, and discoveries from diverse cultures, environments, economies, and geographies. Our mission is to educate the world by presenting this wealth of knowledge in an accessible and user-friendly manner. Through global collaborations with organizations and individuals, our aim is to create a comprehensive tapestry of wisdom for a sustainable future.</span>
   </div>
   <Image className='rounded-full overflow-hidden border border-gray-300 h-80 w-80'
       src="/images/planetpeep.jpg"
@@ -30,7 +31,7 @@ const Option1 = () =>
 </div>;
 
 const Option2 = () => 
-  <div className=' w-4/5 mt-8 ml-36 flex'>
+  <div className=' w-11/12 mt-8 ml-36 flex'>
     <div className='w-2/3 flex flex-col'>
     <h className='text-6xl mb-8'>Voice of planet</h>
     <span>Raasta Audiobook is our premier podcast and audio channel, serving as your gateway to diverse sustainability topics. Our engaging audiobooks cover sustainable living, conservation, and eco-friendly innovations, making complex subjects accessible to all.
@@ -45,7 +46,7 @@ const Option2 = () =>
   </div>;
 
   const Option3 = () => 
-    <div className='w-4/5 mt-8 ml-36 flex'>
+    <div className='w-11/12 mt-8 ml-36 flex'>
       <div className='w-2/3 flex flex-col'>
       <h className='text-6xl mb-8'>Stories of the <br></br>Planet</h>
       <span>
@@ -110,7 +111,7 @@ function About() {
     align: "start",
     loop: true,
   }}
-  className="ml-auto mr-auto md:ml-24 md:mr-0 max-w-7xl"
+  className="ml-auto mr-auto md:ml-28 md:mr-0 max-w-7xl"
 >
   <CarouselContent className="max-h-96 h-96">
     {imageUrls.map((url, index) => (
@@ -118,30 +119,34 @@ function About() {
         <div className="p-1 h-full">
           <Card className="h-full">
             <CardContent className="flex aspect-square items-center justify-center p-0">
-              <img
+              <Image
                 src={url}
                 alt={`Image ${index + 1}`}
+                width={800}
+                height={800}
                 className="object-cover h-full w-full"
               />
+               
+
             </CardContent>
           </Card>
         </div>
       </CarouselItem>
-    ))}
+    ))} 
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
 </Carousel>
 
 
-      <div className=" pt-6 ml-72 bg-white text-center w-3/5">
-        <span className="text-lg">
+<div className="pt-6 md:text-center mx-auto md:ml-72 bg-white md:w-3/5 px-4 md:px-0">
+        <span className="text-lg  md:text-center">
           <strong>Hello Global Community,</strong>
           <br />
           Were Raasta Research and Development, embarking on an exciting journey
           to explore various facets of global sustainable development. In our
-          dedicated quest, we're not only uncovering a wealth of knowledge
-          available around the world but also ensuring it's freely accessible to
+          dedicated quest, we&apos;re not only uncovering a wealth of knowledge
+          available around the world but also ensuring it&apos;s freely accessible to
           everyone. Our goal is to bridge the gap in understanding nature and
           its resources, cultivating global awareness that encourages
           conscientious choices for a harmonious environment. Recognizing the
@@ -162,21 +167,24 @@ function About() {
 </button> 
 </div>
 
-      <div className=" ml-72 relative flex items-center w-5/6">
-
-  <h className="ml-20 absolute text-8xl font-extrabold tracking-tighter" >How do we <br></br>
-  <h className="text-9xl ">SAVE</h> our <br /> planet ?</h>
+<div className="ml-64 relative flex items-center w-5/6 ">
+    <Image
+      src="/images/saveearth.png"
+      width={450} 
+        height={450}
+      alt="Picture of the author"
+      className="ml-20 absolute" 
+    />
   
-  <video className="overflow-hidden ml-40" autoPlay loop muted>
-  <source src="/images/earth-loop.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+  <video className="overflow-hidden ml-52 w-[1500px] h-[750px]" autoPlay loop muted>
+    <source src="/images/earth-loop.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 </div>
 
-          <div className='flex '>
+          <div className='flex'>
       <div className='w-4/6'>
-      <nav className='w-3/5 gap-2  ml-40'>
+      <nav className='w-3/5 gap-2 ml-40'>
         <ul className='flex text-xl justify-between'>
         <li className="cursor-pointer hover:text-gray-500 border border-gray-300 rounded-md p-2 hover:bg-gray-50" onClick={() => setOption('option1')}>
   Planet Peep
@@ -192,7 +200,7 @@ Audio book</li>
 
     </div>
 
-    <div className='flex flex-col items-center justify-center'>
+    <div className='ml-20 flex flex-col items-center justify-center'>
       <h className='text-6xl '>Our Learning <br></br>Platforms</h>
 <button className='border border-black text-lg px-3 py-1 mt-4'>
   Know more
@@ -210,7 +218,7 @@ Audio book</li>
     align: "start",
     loop: true,
   }}
-  className="ml-auto mt-40 mr-auto md:ml-24 md:mr-0 max-w-7xl"
+  className="ml-auto mt-40 mr-auto md:ml-28 md:mr-0 max-w-7xl"
 >
   <CarouselContent className="max-h-96 h-96">
     {imageUrls.map((url, index) => (
@@ -218,9 +226,11 @@ Audio book</li>
         <div className="p-1 h-full">
           <Card className="h-full">
             <CardContent className="flex aspect-square items-center justify-center p-0">
-              <img
+            <Image
                 src={url}
                 alt={`Image ${index + 1}`}
+                width={800}
+                height={800}
                 className="object-cover h-full w-full"
               />
             </CardContent>
@@ -243,7 +253,6 @@ Audio book</li>
 </div>
 
   </div>
-
   );
 }
 
