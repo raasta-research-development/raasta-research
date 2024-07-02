@@ -49,11 +49,14 @@ function Navbar() {
           </li>
         </ul>
 
-        <img
+       
+          <Image
           src="/images/raasta1.png"
-          alt="Raasta Logo"
-          className="max-w-56 h-auto object-contain"
-        />
+          width={250}
+      height={250}
+      alt="Picture of the author"
+    />
+
       </nav>
     </header>
   );
