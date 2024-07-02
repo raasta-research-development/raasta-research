@@ -1,45 +1,46 @@
-
 // import React from 'react';
-import Link from 'next/link';
-import * as React from "react"
-
+import Link from "next/link";
+import * as React from "react";
 
 function Home() {
   return (
     <div className="mt-10 md:mt-20">
-      <div className="bg-gray-500 mt-4 p-4 md:p-6" style={{ height: '25rem' }}>
+      <div className="bg-gray-500 mt-4 p-4 md:p-6" style={{ height: "25rem" }}>
         Content Here
       </div>
 
       <div className="flex justify-center items-center mt-6">
-  <input
-    type="text"j
-    placeholder="Search"
-    className="w-full md:w-full lg:w-96 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-1 ring-gray-400 transition-all hover:border-gray-400"
-  />
-</div>
-
-
+        <input
+          type="text"
+          placeholder="Search"
+          className="w-full md:w-full lg:w-96 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-1 ring-gray-400 transition-all hover:border-gray-400"
+        />
+      </div>
 
       <div className="flex flex-col ml-24 mr-24 md:flex-row mt-4 md:mt-8 space-y-4 md:space-y-0 md:space-x-4 justify-center">
-
-<div className="bg-[url('/images/musicbackground.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
-  style={{ height: '35rem', flex: '1' }}
->
-  <Link href="/about"> {/* Replace "/audio" with the actual path of your audio page */}
-      <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Audio</p>
-      <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
-        Additional Text on Hover
-      </div>
-    
-  </Link>
-</div>
+        <div
+          className="bg-[url('/images/musicbackground.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
+          style={{ height: "35rem", flex: "1" }}
+        >
+          <Link href="/about">
+            {" "}
+            {/* Replace "/audio" with the actual path of your audio page */}
+            <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">
+              Audio
+            </p>
+            <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
+              Additional Text on Hover
+            </div>
+          </Link>
+        </div>
 
         <div
           className="bg-[url('/images/videoback.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
-          style={{ height: '35rem', flex: '1' }}
+          style={{ height: "35rem", flex: "1" }}
         >
-          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Video</p>
+          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">
+            Video
+          </p>
           <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
             Additional Text on Hover
           </div>
@@ -47,9 +48,11 @@ function Home() {
 
         <div
           className="bg-[url('/images/readback.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
-          style={{ height: '35rem', flex: '1' }}
+          style={{ height: "35rem", flex: "1" }}
         >
-          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Read</p>
+          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">
+            Read
+          </p>
           <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
             Additional Text on Hover
           </div>
@@ -57,9 +60,11 @@ function Home() {
 
         <div
           className="bg-[url('/images/liveback.jpg')] p-4 md:p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 relative flex flex-col items-center justify-center group"
-          style={{ height: '35rem', flex: '1' }}
+          style={{ height: "35rem", flex: "1" }}
         >
-          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">Live</p>
+          <p className="text-white text-lg font-semibold mb-4 group-hover:hidden">
+            Live
+          </p>
           <div className="absolute rounded-2xl inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 flex items-center justify-center">
             Additional Text on Hover
           </div>
@@ -69,7 +74,9 @@ function Home() {
       <div className="bg-lime-100 p-4 md:p-6 mt-12 mb-10 rounded-md shadow-md mx-4 md:w-1/3 md:mx-auto">
         <form>
           <div className="mb-2 md:mb-4">
-            <label className="block text-sm md:text-base text-gray-700">Email</label>
+            <label className="block text-sm md:text-base text-gray-700">
+              Email
+            </label>
             <input
               type="email"
               placeholder="Enter your email"
@@ -77,7 +84,9 @@ function Home() {
             />
           </div>
           <div className="mb-2 md:mb-4">
-            <label className="block text-sm md:text-base text-gray-700">Password</label>
+            <label className="block text-sm md:text-base text-gray-700">
+              Password
+            </label>
             <input
               type="password"
               placeholder="Enter your password"
@@ -91,7 +100,9 @@ function Home() {
             Login
           </button>
         </form>
-        <p className="text-sm text-center mt-4">Don&apos;t have an account? <a href="#">Sign Up</a></p>
+        <p className="text-sm text-center mt-4">
+          Don&apos;t have an account? <a href="#">Sign Up</a>
+        </p>
       </div>
     </div>
   );
