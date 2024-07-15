@@ -3,8 +3,8 @@ import Image from 'next/image'; // Import Image component for Next.js
 
 const Footer = () => {
   return (
-    <footer className="bg-lime-800 text-white p-4">
-      <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
+    <footer className="bg-new-color text-white p-4">
+    <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
         
         {/* Left Section */}
         <div className="flex flex-col">

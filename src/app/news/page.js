@@ -1,39 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
 
-
 function News() {
   return (
-    <div className='mt-24 '>
-    <div className='w-3/5 mt-32 flex flex-col items-center'>
-        <h1 className='text-4xl font-bold mb-5'> 
-            TOPIC ON FIRE
-        </h1>
-
-        <Image
-      src="/images/c3.webp"
-      width={500}
-      height={500}
-      alt="Picture of the author"
-      className="w-4/5 h-96" 
-    />
-    <p className='ml-24 mr-16 mb-32 mt-10'>
-        <h className="text-3xl">Covid 19</h>
-        <br></br>
-        
-COVID-19, short for "Coronavirus Disease 2019,
-" is caused by the virus SARS-CoV-2. It was first
-identified in December 2019 in Wuhan, China, and quickly spread globally, leading to a pandemic.
-The disease primarily spreads through respiratory droplets when an infected person coughs,
-sneezes, or talks, though it can also spread via aerosols and surfaces.
-Symptoms of COVID-19 can range from mild to severe and include fever, cough, fatigue, loss of taste
-or smell, and difficulty breathing. Some individuals may experience more serious complications,
-especially those with underlying health conditions or older adults
-    </p>
+    <div className=' flex flex-row mt-24'>
+  
+    <div className='max-w-6xl mx-auto p-6 ' >
+    <h1 className="text-4xl font-bold text-center">TOPIC ON FIRE</h1>
+    
+            <Image src="/images/aboutlogo.png" alt="Covid 19" width={100} height={100} />
+            <h2 className="text-2xl font-bold mt-4">Covid 19</h2>
+            <p className="mt-2 text-gray-700">
+            COVID-19, short for &quot;Coronavirus Disease 2019,&quot; is caused by the virus SARS-CoV-2. It was first identified in December 2019 in Wuhan, China, and quickly spread globally, leading to a pandemic. The disease primarily spreads through respiratory droplets when an infected person coughs, sneezes, or talks, though it can also spread via aerosols and surfaces. Symptoms of COVID-19 can range from mild to severe and include fever, cough, fatigue, loss of taste or smell, and difficulty breathing. Some individuals may experience more serious complications, especially those with underlying health conditions or older adults.
+            </p>  
     </div>
+    <div className="flex flex-wrap">
+    <Image className="w-1/2 p-1"  src="/images/aboutlogo.png" alt="Book 1" width={100} height={100} />
+    <Image className="w-1/2 p-1"  src="/images/aboutlogo.png" alt="Book 2" width={100} height={100} />
+    <Image className="w-1/2 p-1"  src="/images/aboutlogo.png" alt="Book 3" width={100} height={100} />
+    <Image className="w-1/2 p-1" src="/images/aboutlogo.png" alt="Book 4" width={100} height={100} />
+</div>
 
     </div>
+
   )
 }
-
 export default News

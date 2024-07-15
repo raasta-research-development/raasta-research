@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -18,6 +19,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'new-color': '#94a11a',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,3 +77,5 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
+
+
