@@ -28,7 +28,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#" className="block px-4 py-2 rounded-full hover:bg-new-color transition-colors duration-300 uppercase">
+            <Link href="/audio" className="block px-4 py-2 rounded-full hover:bg-new-color transition-colors duration-300 uppercase">
               AUDIO
             </Link>
           </li>

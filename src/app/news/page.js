@@ -20,7 +20,6 @@ function News() {
     <Image className="w-1/2 p-1"  src="/images/aboutlogo.png" alt="Book 3" width={100} height={100} />
     <Image className="w-1/2 p-1" src="/images/aboutlogo.png" alt="Book 4" width={100} height={100} />
 </div>
-
     </div>
 
   )
