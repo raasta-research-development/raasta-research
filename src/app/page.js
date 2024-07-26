@@ -4,7 +4,18 @@ import { Search } from "@/components/ui/search";
 import { BsThreeDots } from "react-icons/bs";
 import Link from "next/link";
 
+const ImageCard = ({ src, alt }) => (
+  <Image src={src} alt={alt} height={500} width={500} className="rounded-2xl" />
+);
+
 export default function Home() {
+  const BannerImages = [
+    { src: "/card1.jpg", alt: "card 1" },
+    { src: "/card2.jpg", alt: "card 2" },
+    { src: "/card3.jpg", alt: "card 3" },
+    { src: "/card4.jpg", alt: "card 4" },
+  ];
+
   return (
     <main>
       <Header />
@@ -37,34 +48,9 @@ export default function Home() {
         <BsThreeDots className="w-12 h-8" />
       </div>
       <div className="grid grid-cols-4 gap-4 mx-14 my-2">
-        <Image
-          src="/card1.jpg"
-          alt="card"
-          height={500}
-          width={500}
-          className="rounded-2xl"
-        />
-        <Image
-          src="/card2.jpg"
-          alt="card"
-          height={500}
-          width={500}
-          className="rounded-2xl"
-        />
-        <Image
-          src="/card3.jpg"
-          alt="card"
-          height={500}
-          width={500}
-          className="rounded-2xl"
-        />
-        <Image
-          src="/card4.jpg"
-          alt="card"
-          height={500}
-          width={500}
-          className="rounded-2xl"
-        />
+        {BannerImages.map((image, index) => (
+          <ImageCard key={index} src={image.src} alt={image.alt} />
+        ))}
       </div>
     </main>
   );
