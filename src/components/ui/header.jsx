@@ -8,9 +8,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Search } from "@/components/ui/search";
 
-export function Header() {
+export function Header({ currentRoute }) {
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 fixed top-0 z-50 bg-gray-200 bg-opacity-30 backdrop-blur-md backdrop-filter shadow-lg">
+    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 fixed top-0 z-50 bg-gray-200 bg-opacity-30 backdrop-blur-md backdrop-filter shadow-lg ">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="lg:hidden">
@@ -25,14 +25,14 @@ export function Header() {
           </Link>
           <div className="grid py-6">
             <Link
-              href="#"
+              href="/"
               className="flex w-full items-center py-2 text-lg font-semibold  text-[#98a31f]"
               prefetch={false}
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="/audio"
               className="flex w-full items-center py-2 text-lg font-semibold text-[#98a31f]"
               prefetch={false}
             >
@@ -91,8 +91,12 @@ export function Header() {
         <NavigationMenuList className="gap-2">
           <NavigationMenuLink asChild>
             <Link
-              href="#"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors bg-gray-100 hover:bg-[#98a31f] duration-500 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50 text-[#98a31f]"
+              href="/"
+              className={`group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                currentRoute === "/"
+                  ? "bg-[#98a31f] text-gray-900"
+                  : "bg-gray-100 text-[#98a31f] hover:bg-[#98a31f] hover:text-gray-900"
+              } duration-500 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50`}
               prefetch={false}
             >
               Home
@@ -100,8 +104,12 @@ export function Header() {
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              href="#"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors bg-gray-100 hover:bg-[#98a31f] duration-500 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50 text-[#98a31f]"
+              href="/audio"
+              className={`group inline-flex h-9 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                currentRoute === "/audio"
+                  ? "bg-[#98a31f] text-gray-900"
+                  : "bg-gray-100 text-[#98a31f] hover:bg-[#98a31f] hover:text-gray-900"
+              } duration-500 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50`}
               prefetch={false}
             >
               Audio

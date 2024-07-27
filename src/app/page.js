@@ -1,8 +1,8 @@
-import { Header } from "@/components/ui/header";
 import Image from "next/image";
 import { Search } from "@/components/ui/search";
 import { BsThreeDots } from "react-icons/bs";
 import Link from "next/link";
+import { HeaderWrapper } from "@/components/ui/header-wrapper";
 
 const ImageCard = ({ src, alt }) => (
   <Image src={src} alt={alt} height={500} width={500} className="rounded-2xl" />
@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <main>
-      <Header />
+      <HeaderWrapper />
       <div className="w-full h-32 sm:h-72 mt-20 relative">
         <Image
           src="/banner.jpg"
@@ -40,14 +40,14 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <span>
-            Summer of '24: India's heatwave
+            Summer of &apos;24: India&apos;s heatwave
             <br />
             turns deadly with over 100 deaths, 40,000 suspected heatstroke cases
           </span>
         </Link>
         <BsThreeDots className="w-12 h-8" />
       </div>
-      <div className="grid grid-cols-4 gap-4 mx-14 my-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mx-6 sm:mx-14">
         {BannerImages.map((image, index) => (
           <ImageCard key={index} src={image.src} alt={image.alt} />
         ))}
