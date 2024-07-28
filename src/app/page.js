@@ -3,6 +3,8 @@ import { Search } from "@/components/ui/search";
 import { BsThreeDots } from "react-icons/bs";
 import Link from "next/link";
 import { HeaderWrapper } from "@/components/ui/header-wrapper";
+import Footer from "@/components/Footer";
+import AuthForm from "@/components/ui/auth-form";
 
 const ImageCard = ({ src, alt }) => (
   <Image src={src} alt={alt} height={500} width={500} className="rounded-2xl" />
@@ -47,11 +49,13 @@ export default function Home() {
         </Link>
         <BsThreeDots className="w-12 h-8" />
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mx-6 sm:mx-14">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mx-6 sm:mx-14 mb-8">
         {BannerImages.map((image, index) => (
           <ImageCard key={index} src={image.src} alt={image.alt} />
         ))}
       </div>
+      <AuthForm />
+      <Footer />
     </main>
   );
 }
