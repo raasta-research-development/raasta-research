@@ -12,10 +12,10 @@ const ImageCard = ({ src, alt }) => (
 
 export default function Home() {
   const BannerImages = [
-    { src: "/card1.jpg", alt: "card 1" },
-    { src: "/card2.jpg", alt: "card 2" },
-    { src: "/card3.jpg", alt: "card 3" },
-    { src: "/card4.jpg", alt: "card 4" },
+    { src: "/cards.jpg", alt: "card 1" },
+    { src: "/cards.jpg", alt: "card 2" },
+    { src: "/cards.jpg", alt: "card 3" },
+    { src: "/cards.jpg", alt: "card 4" },
   ];
 
   return (

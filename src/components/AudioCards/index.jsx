@@ -3,11 +3,8 @@ import Image from "next/image";
 export default function AudioCards() {
   return (
     <>
-      <main className="grid place-items-center min-h-screen bg-white p-5">
+      <main className="grid place-items-center min-h-screen bg-white">
         <div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#98a31f] mb-5">
-            Audio & Podcasts For You!
-          </h1>
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <div key={index} className="bg-[#c9d08c] shadow-lg rounded p-3">
