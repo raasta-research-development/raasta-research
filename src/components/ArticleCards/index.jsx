@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function ArticleCards() {
   return (
@@ -21,7 +22,7 @@ export function ArticleCards() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           <article className="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md">
             <Link href="#" className="block" prefetch={false}>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Article Image"
                 width={600}
@@ -41,7 +42,7 @@ export function ArticleCards() {
               </h3>
               <p className="text-muted-foreground text-sm md:text-base mb-4">
                 Discover how React Hooks can simplify your code and improve your
-                component's lifecycle.
+                component&apos;s lifecycle.
               </p>
               <Link
                 href="#"
@@ -55,7 +56,7 @@ export function ArticleCards() {
           </article>
           <article className="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md">
             <Link href="#" className="block" prefetch={false}>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Article Image"
                 width={600}
@@ -89,7 +90,7 @@ export function ArticleCards() {
           </article>
           <article className="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md">
             <Link href="#" className="block" prefetch={false}>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Article Image"
                 width={600}
@@ -108,8 +109,8 @@ export function ArticleCards() {
                 </Link>
               </h3>
               <p className="text-muted-foreground text-sm md:text-base mb-4">
-                Improve your website's speed and user experience by implementing
-                lazy loading techniques.
+                Improve your website&apos;s speed and user experience by
+                implementing lazy loading techniques.
               </p>
               <Link
                 href="#"
@@ -123,7 +124,7 @@ export function ArticleCards() {
           </article>
           <article className="bg-background rounded-lg overflow-hidden shadow-sm transition-all hover:shadow-md">
             <Link href="#" className="block" prefetch={false}>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Article Image"
                 width={600}
