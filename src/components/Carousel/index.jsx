@@ -23,8 +23,9 @@ const ImageCarousel = ({ imageUrls }) => {
         align: "start",
         loop: true,
       }}
-      className="ml-auto mr-auto md:ml-28 md:mr-0 max-w-7xl"
+      className="ml-0 mr-auto md:ml-auto md:mr-auto max-w-7xl"
     >
+        
       <CarouselContent className="max-h-96 h-96">
         {imageUrls.map((url, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">

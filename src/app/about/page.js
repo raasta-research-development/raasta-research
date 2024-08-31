@@ -2,6 +2,10 @@ import React from "react";
 import ImageCarousel from "@/components/Carousel";
 import Image from "next/image";
 import AboutOptions from "@/components/AboutOptions";
+import { HeaderWrapper } from "@/components/ui/header-wrapper";
+import Footer from "@/components/Footer";
+
+
 
 function About() {
   const imageUrls = [
@@ -13,6 +17,10 @@ function About() {
   ];
 
   return (
+    
+    <>
+     <HeaderWrapper />
+    
     <div className="mt-28 overflow-hidden">
       <div className="flex flex-col justify-center items-center">
         <Image
@@ -26,8 +34,9 @@ function About() {
       </div>
 
       <ImageCarousel imageUrls={imageUrls} />
+     
 
-      <div className="pt-6 mt-16 text-justify lg:text-center mx-auto md:ml-72 bg-white md:w-3/5 px-4 md:px-0 ">
+      <div className="pt-6 mt-16 text-justify lg:text-center mx-auto md:ml-auto bg-white md:w-3/5 px-4 md:px-0 ">
         <span className="text-lg">
           <strong className="text-xl">Hello Global Community,</strong>
           <br />
@@ -52,7 +61,29 @@ function About() {
         <br></br>
       </div>
 
-      <div className="relative flex flex-col lg:items-center lg:flex-row mt-10 w-full px-4 lg:ml-60">
+      <div className="relative flex flex-col mt-10 w-full md:flex-row md:items-center md:justify-center">
+  <Image
+    src="/images/saveearth.png"
+    width={450}
+    height={450}
+    alt="Picture of the author"
+    className="md:ml-auto md:h-96 md:w-96 lg:w-1/3"
+  />
+
+  <video
+    className="overflow-hidden w-full md:w-1/2 h-auto md:h-[500px] "
+    autoPlay
+    loop
+    muted
+  >
+    <source src="/images/earthloop.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+      
+      {/* <div className="relative flex flex-col lg:items-center lg:flex-row mt-10 w-full px-4 lg:ml-60">
         <Image
           src="/images/saveearth.png"
           width={450}
@@ -70,7 +101,8 @@ function About() {
           <source src="/images/earthloop.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> */}
+
 
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-4/6">
@@ -81,7 +113,7 @@ function About() {
       <ImageCarousel imageUrls={imageUrls} />
 
 
-      <div className="mt-20 mb-20 flex flex-col md:flex-row items-center gap-8 md:gap-20 mx-auto md:w-3/5 md:px-4">
+      <div className="mt-20 mb-20 flex flex-col md:flex-col xl:flex-row items-center gap-8 md:gap-20 mx-auto md:w-3/5 md:px-4">
         <h1 className="text-3xl md:text-5xl lg:text-7xl leading-tight font-bold">
           Why Raasta?
         </h1>
@@ -106,6 +138,9 @@ function About() {
         </p>
       </div>
     </div>
+    <Footer />
+
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 export const FirstOption = () => (
-  <div className="w-11/12 mt-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
+  <div className="w-11/12 mt-8 mb-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
     <div className="w-full items-center lg:items-start lg:w-2/4 flex flex-col">
       <h1 className="text-4xl lg:text-6xl font-serif">Eyes of Planet</h1>
       <h2 className="text-lg lg:text-xl font-serif ml-1 mb-4 lg:mb-8">
@@ -33,7 +33,7 @@ export const FirstOption = () => (
 );
 
 export const SecondOption = () => (
-  <div className="w-11/12 mt-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
+  <div className="w-11/12 mt-8 mb-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
     <div className="w-full items-center lg:items-start lg:w-2/4 flex flex-col">
       <h className="text-4xl lg:text-6xl font-serif">Voice of planet</h>
       <span className="text-justify">
@@ -57,7 +57,7 @@ export const SecondOption = () => (
 );
 
 export const ThirdOption = () => (
-  <div className="w-11/12 mt-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
+  <div className="w-11/12 mt-8 mb-8 mx-auto items-center flex flex-col-reverse lg:flex-row lg:ml-36">
     <div className="w-full items-center lg:items-start lg:w-2/4 flex flex-col">
       <h className="text-4xl lg:text-6xl font-serif">Stories of the Planet</h>
       <span className="text-justify">
