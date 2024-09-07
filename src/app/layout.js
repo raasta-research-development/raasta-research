@@ -1,15 +1,17 @@
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "Raasta Research & Development",
+  description: "Focusing on Sustainable Development",
+};
 
 export default function RootLayout({ children }) {
-  return (  
+  return (
     <html lang="en">
-      <body >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

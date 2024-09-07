@@ -1,13 +1,13 @@
-import React from 'react'
-import ReadOptions from "@/components/ReadOptions";
+import Footer from "@/components/Footer";
+import { HeaderWrapper } from "@/components/ui/header-wrapper";
+import { ArticleCards } from "@/components/ArticleCards";
 
-
-function page() {
+export default function Read() {
   return (
-    <div className='mt-24 flex '>
-            <ReadOptions/>
-    </div>
-)
+    <>
+      <HeaderWrapper />
+      <ArticleCards />
+      <Footer />
+    </>
+  );
 }
-
-export default page
